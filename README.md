@@ -1,2 +1,3 @@
-# Reli_PM
- Analyzing the effect of shifting preventive maintenance on reliability metrics.
+# Schedule Preventive Maintenance Based on Reliability
+
+#### Analyzing the effect of different preventive maintenance intervals on reliability metrics
