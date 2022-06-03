@@ -232,7 +232,7 @@ def get_fpmh_by_intervals(wbf, intervals=range(1, 46)):
 
 
 # Config Streamlit
-st.set_page_config(page_title="Shift PM", layout="wide")
+st.set_page_config(page_title="Rel PM", layout="wide")
 st.title("Reliability Based Preventive Maintenance")
 print_about()
 st.markdown("---")
