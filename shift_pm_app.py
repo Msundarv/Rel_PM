@@ -259,6 +259,46 @@ def get_fpmh_by_intervals(wbf, intervals=range(1, 46)):
     st_col2.image(fig_buf)
     st_col3.text("")
 
+    return fpmh_intervals
+
+
+def print_summary_table(wbf, asset_class, fpmh_intervals):
+    """
+    Print summary table with information such as model params, and other key metrics
+    """
+    shape = float("{:.2f}".format(wbf.rho_))
+    scale = float("{:.2f}".format(wbf.lambda_))
+    fr = "Random" if shape == 1 else "Increasing" if shape > 1 else "Decreasing"
+    exp_failures = "{:.2f}".format(fpmh_intervals.iloc[12]["FPMH"])
+
+    summary_df = pd.DataFrame(
+        [
+            [
+                asset_class,
+                "{:.2f}".format(shape),
+                "{:.2f}".format(scale),
+                fr,
+                exp_failures,
+            ]
+        ],
+        columns=[
+            "Asset Class",
+            "Shape",
+            "Scale",
+            "Failure Rate",
+            "Exp. Failures (1Yr)",
+        ],
+    )
+
+    hide_table_row_index = """
+            <style>
+            tbody th {display:none}
+            .blank {display:none}
+            </style>
+            """
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    st.table(summary_df)
+
     return None
 
 
@@ -299,7 +339,12 @@ if uploaded_file:
 
         # Calc. FPMH for different PM Intervals
         st.subheader("Plan Preventive Maintenance")
-        get_fpmh_by_intervals(wbf, range(1, 24))
+        fpmh_intervals = get_fpmh_by_intervals(wbf, range(1, 24))
+        st.markdown("---")
+
+        # Display summary table
+        st.subheader("Summary")
+        print_summary_table(wbf, wo_f["asset_class"][0], fpmh_intervals)
         st.markdown("---")
 
     except ValueError:
