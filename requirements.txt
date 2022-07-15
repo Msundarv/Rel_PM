@@ -1,0 +1,9 @@
+altair==4.2.0
+lifelines==0.27.0
+matplotlib==3.5.1
+nbclient==0.6.3
+nbformat==5.4.0
+nbparameterise==0.5
+numpy==1.22.2
+pandas==1.4.1
+streamlit==1.9.2
