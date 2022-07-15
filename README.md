@@ -6,7 +6,7 @@
 
 Link to the app: https://share.streamlit.io/msundarv/rel_pm/main/shift_pm_app.py
 
-To run the app locally:
+Command to run the app locally:
 ```
 streamlit run shift_pm_app.py
 ```
@@ -19,7 +19,7 @@ List of libraries required is [here](https://github.com/Msundarv/Rel_PM/blob/mai
 
 ## Input Data
 
-Before trying the app, you need to have the work order data. You can either use [this](https://github.com/Msundarv/Rel_PM/blob/main/Generate_WO_Data.ipynb) notebook to generate some dummy work order data or use the generated [dummy work order data](https://github.com/Msundarv/Rel_PM/blob/main/dummy_wo.xlsx) from the same notebook.
+Before trying the app, you need to have the work order data. You can either use [this](https://github.com/Msundarv/Rel_PM/blob/main/gen_wo/gen_wo.py) script to generate some dummy work order data or use the generated [dummy work order data](https://github.com/Msundarv/Rel_PM/blob/main/dataset/dummy_wo-v1.xlsx) from the same script.
 
 ## Authors
 
