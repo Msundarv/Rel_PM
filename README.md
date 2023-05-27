@@ -4,12 +4,11 @@
 
 <p>The present asset hierarchy assumption is that a system consists of multiple subsystems, and every subsystem has many asset classes. For example, an asset class name 'SIG/ATC/OBU' will denote 'SIG' as the system name and 'ATC' as the subsystem name for the asset class 'OBU'. All our analyses are at asset class level.</p>
 
-Link to the app: https://share.streamlit.io/msundarv/rel_pm/main/shift_pm_app.py
-
 Command to run the app locally:
 ```
 streamlit run shift_pm_app.py
 ```
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/cnB4epEkgqc/0.jpg)](http://www.youtube.com/watch?v=cnB4epEkgqc "Rel_PM Demo")
 
 ## Prerequisites
 
